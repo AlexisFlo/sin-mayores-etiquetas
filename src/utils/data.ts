@@ -1,7 +1,7 @@
 const services = [
     {
       title:"Mito 1",
-      description:"Las perspmas mayores son incapaces de aprender cosas nuevas"
+      description:"Las personas mayores son incapaces de aprender cosas nuevas"
     },
     {
       title:"Mito 2",
