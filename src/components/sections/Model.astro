@@ -1,0 +1,35 @@
+---
+import Service from "../cards/Service.astro";
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Title from "../shared/Title.astro";
+import { models } from "../../utils/model.ts";
+
+
+type ModelsProps = {
+    title: string;
+    description: string;
+};
+
+
+---
+
+<section id="models">
+    <Container className="space-y-10 md:sapce-y-12">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <Title>
+                Se un modelo a seguir
+            </Title>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {
+                    models.map((model: ModelsProps) => {
+                    return (
+                            <Service title={model.title} description={model.description}>
+                            </Service>
+                            );
+                    })
+            }
+        </div>
+    </Container>
+</section>
